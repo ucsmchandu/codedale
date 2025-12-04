@@ -58,7 +58,7 @@ const Navbar = () => {
 
         {/* Dropdown menu */}
         <div
-          className={`flex flex-col gap-3 overflow-hidden transition-all duration-500 ease-in-out ${
+          className={`flex inset-0 z-40 flex-col gap-3 overflow-hidden transition-all duration-500 ease-in-out ${
             menuOpen ? "max-h-96 opacity-100 p-3" : "max-h-0 opacity-0"
           }`}
         >
