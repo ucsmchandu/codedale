@@ -1,1 +1,16 @@
 @import "tailwindcss";
+
+.custom-bullet {
+  width: 8px;
+  height: 8px;
+  background: #cfcfcf;
+  opacity: 1;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.custom-bullet-active {
+  background: #000;
+  width: 22px;
+  border-radius: 10px;
+}
