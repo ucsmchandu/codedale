@@ -5,6 +5,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
+import BrandsSlider from "./components/HomeComponents/BrandSlider";
 
 const Home = () => {
   const cardsData = [
@@ -53,22 +54,39 @@ const Home = () => {
       customerCompany: "CEO, TFS",
     },
   ];
-  const slides=[...cardsData,...cardsData];
+  const slides = [...cardsData, ...cardsData];
   return (
     <div className="bg-gray-100 flex flex-col items-center px-4">
-      
+      {/* main welcome section section */}
       <div className="flex flex-col items-center justify-center mt-10 text-center gap-6 max-w-4xl">
         <div className="flex flex-row cursor-pointer justify-center items-center gap-2 w-fit p-1.5 rounded-full bg-white shadow-sm hover:shadow-md transition-all">
           <span className="h-2 w-2 animate-ping rounded-full bg-green-500 opacity-85"></span>
           <button className="text-sm cursor-pointer text-gray-800 font-medium">
             Only 2 open slots available
           </button>
-          <ArrowRight size={20} className="text-gray-800 p-0.5 rounded-full bg-gray-100" />
+          <ArrowRight
+            size={20}
+            className="text-gray-800 p-0.5 rounded-full bg-gray-100"
+          />
         </div>
 
-        <h1 className="text-4xl md:text-5xl font-semibold">
-          World-class Tech Partner
-        </h1>
+        <div className="flex flex-row gap-2 md:gap-4 mb-2 items-center flex-wrap justify-center">
+          <h1 className="text-4xl md:text-5xl font-semibold">
+            World-class Tech Partner
+          </h1>
+          <span className="flex flex-row justify-center items-center gap-1">
+            <img
+              className="bg-white rounded-lg px-2 py-2 rotate-12 shadow-sm"
+              src="https://www.codedale.tech/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fcursor.b9d537cd.svg&w=32&q=75"
+              alt="cursor"
+            />
+            <img
+              className="bg-white rounded-lg px-2 py-1 h-8 -rotate-20 shadow-sm"
+              src="https://www.codedale.tech/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ffigma-logo.bdabe27a.svg&w=32&q=75"
+              alt="figma"
+            />
+          </span>
+        </div>
 
         <h1 className="text-4xl md:text-5xl font-semibold flex items-center justify-center gap-3 flex-wrap">
           Engineering Your Digital
@@ -81,9 +99,10 @@ const Home = () => {
         </h1>
 
         <p className="text-center text-md text-gray-700 max-w-lg leading-relaxed">
-          Trusted by startups and enterprises to design, build, and scale products that perform globally.
+          Trusted by startups and enterprises to design, build, and scale
+          products that perform globally.
         </p>
-         {/* CTA */}
+        {/* CTA */}
         <button className="flex justify-center items-center rounded-full bg-black hover:bg-gray-900 text-white px-5 py-3 gap-2 cursor-pointer shadow-md transition-all active:scale-95 mt-4">
           <img
             className="h-6 bg-white rounded-full p-1"
@@ -126,6 +145,7 @@ const Home = () => {
         </div>
       </div>
 
+      {/* customer cards */}
       <div className="mt-20 w-full max-w-[1800px] mx-auto px-4">
         <Swiper
           modules={[Autoplay, Pagination]}
@@ -149,14 +169,54 @@ const Home = () => {
             1280: { slidesPerView: 3.2, spaceBetween: 22 }, // EXACT layout like screenshot
           }}
         >
-          {slides.map((card) => (
-            <SwiperSlide key={card.id}>
+          {slides.map((card, index) => (
+            <SwiperSlide key={index}>
               <div className="flex justify-center">
                 <Cards data={card} />
               </div>
             </SwiperSlide>
           ))}
         </Swiper>
+      </div>
+
+      {/* customer images */}
+      <div className="mt-10 overflow-hidden">
+        <BrandsSlider />
+      </div>
+
+      {/* why choose codedale */}
+      <div className="flex mt-10 flex-col items-center justify-center">
+        <div>
+          <img
+            className="h-10 w-9 rounded-4xl"
+            src="https://www.codedale.tech/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fvasant.b1a95dae.webp&w=256&q=75"
+            alt=""
+          />
+        </div>
+        <div>
+          <p className="font-semibold text-center text-gray-700">
+            It's not the lines we type,
+          </p>
+          <p className="font-semibold text-center text-gray-700">
+            it's the solutions they unlock.
+          </p>
+          <p className="text-sm text-center text-gray-500">
+            - CTO, Vasanta Kumar
+          </p>
+        </div>
+      </div>
+
+      <div className="flex flex-col mt-16 items-center justify-center">
+        <div className="flex flex-col gap-2">
+          <h1 className="font-semibold text-4xl text-center">Why Choose CodeDale?</h1>
+          <p className="w-lg text-center text-gray-800">Discover the advantages of partnering with a tech team that’s built for results and client success:</p>
+        </div>
+
+        <div>
+          <div>
+             
+          </div>
+        </div>
       </div>
     </div>
   );

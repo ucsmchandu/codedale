@@ -2,7 +2,7 @@ import React from "react";
 
 const Cards = ({data}) => {
   return (
-<div className="bg-white p-4 w-full max-w-[500px] flex flex-col justify-between rounded-3xl shadow-sm hover:shadow-md transition-all">
+<div className="bg-white mb-22 p-4  min-h-[620px] w-full max-w-[500px] flex flex-col justify-between rounded-3xl shadow-sm hover:shadow-md transition-all">
       {/* Image */}
       <div className="w-full flex justify-center">
         <img

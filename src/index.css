@@ -1,16 +1,13 @@
 @import "tailwindcss";
 
-.custom-bullet {
-  width: 8px;
-  height: 8px;
-  background: #cfcfcf;
-  opacity: 1;
-  border-radius: 50%;
-  transition: all 0.3s ease;
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-10%); }
 }
 
-.custom-bullet-active {
-  background: #000;
-  width: 22px;
-  border-radius: 10px;
+.animate-marquee {
+  animation: marquee 5s linear infinite;
 }
+
+
