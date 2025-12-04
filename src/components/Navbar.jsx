@@ -9,12 +9,15 @@ const Navbar = () => {
   return (
     <div className="bg-gray-100">
       {/* Desktop */}
-      <div className="hidden md:flex bg-gray-50 flex-row justify-between items-center p-7 -mt-3">
+      <div className="hidden md:flex bg-gray-50 flex-row justify-between items-center p-7 m-6 -mt-2">
         <Link to="/">
           <img className="h-5" src={mainImage} alt="codedale" />
         </Link>
 
         <div className="flex flex-row gap-3 text-sm px-2 font-medium bg-white shadow-md rounded-4xl py-2">
+          <p className="hover:bg-gray-100 cursor-pointer rounded-4xl py-2 px-2">
+            Services
+          </p>
           <p className="hover:bg-gray-100 cursor-pointer rounded-4xl py-2 px-2">
             Our Work
           </p>
