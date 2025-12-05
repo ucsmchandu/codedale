@@ -184,7 +184,7 @@ const Home = () => {
         <BrandsSlider />
       </div>
 
-      {/* why choose codedale */}
+          
       <div className="flex mt-10 flex-col items-center justify-center">
         <div>
           <img
@@ -206,18 +206,59 @@ const Home = () => {
         </div>
       </div>
 
+      {/* why choose codedale */}
       <div className="flex flex-col mt-16 items-center justify-center">
         <div className="flex flex-col gap-2">
           <h1 className="font-semibold text-4xl text-center">Why Choose CodeDale?</h1>
           <p className="w-lg text-center text-gray-800">Discover the advantages of partnering with a tech team that’s built for results and client success:</p>
         </div>
 
-        <div>
-          <div>
-             
+        <div className="grid mt-16 grid-cols-1 md:grid-cols-3 grid-rows-1 md:grid-rows-2 max-w-4xl gap-10 gap-x-20  ">
+          <div className="flex flex-col gap-2 items-center text-center">
+             <h1 className="font-medium text-xl">Impact-Driven Solutions</h1>
+             <p className="text-gray-900  text-base max-w-[300px]">Every product we build is custom-crafted to create real business impact.</p>
+          </div>
+          <div className="flex flex-col gap-2 items-center text-center">
+            <h1 className="font-medium text-xl">Fast & Reliable Delivery</h1>
+            <p className="text-gray-900 text-center  max-w-[300px]">Get high-quality results in days or weeks, not months.</p>
+          </div>
+          <div className="flex flex-col gap-2 items-center text-center">
+            <h1 className="font-medium text-xl">Transparent & Fair Pricing</h1>
+            <p className="text-gray-900 text-center  max-w-[300px]">Honest, customized pricing with no hidden fees or surprises.</p>
+          </div>
+          <div className="flex flex-col gap-2 items-center text-center">
+            <h1 className="font-medium text-xl">Expert Problem Solvers</h1>
+            <p className="text-gray-900 text-center  max-w-[300px]">We tackle technical and creative challenges with innovative solutions.</p>
+          </div>
+          <div className="flex flex-col gap-2 items-center text-center">
+            <h1 className="font-medium text-xl">Seamless Collaboration</h1>
+            <p className="text-gray-900 text-center  max-w-[300px]">Clear communication and feedback at every stage of the project.</p>
+          </div>
+          <div className="flex flex-col gap-2 items-center text-center">
+            <h1 className="font-medium text-xl">Direct Access to Top Talent</h1>
+            <p className="text-gray-900 text-center max-w-[300px]">Work directly with senior experts—no long-term hiring needed.</p>
           </div>
         </div>
       </div>
+
+      {/* reserve your slot */}
+      <div className="flex mt-16">
+        <p className="border px-6 p-1 py-3 rounded-4xl bg-black text-white">Reserve Your Slot</p>
+      </div>
+
+
+      <div className="w-full max-w-xl mx-auto flex flex-col items-center justify-center text-center py-16 gap-2.5">
+        <h1 className="text-[32px] sm:text-4xl tracking-tight font-semibold undefined">Solutions Tailored for Your Growth</h1>
+        <p className="text-base whitespace-pre-wrap leading-[1.2] undefined">Discover our full-service offerings — crafted to deliver reliability, scalability, and results</p>
+      </div>
+
+
+      <div className="hidden md:grid grid-cols-3 w-full h-full gap-y-16 items-center justify-center py-10 px-10 dashed-y-custom">
+        <div>
+
+        </div>
+      </div>
+
     </div>
   );
 };
