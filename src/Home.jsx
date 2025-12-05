@@ -60,89 +60,129 @@ const Home = () => {
   return (
     <div className="bg-gray-100 flex flex-col items-center px-4">
       {/* main welcome section section */}
-      <div className="flex flex-col items-center justify-center mt-10 text-center gap-6 max-w-4xl">
-        <div className="flex flex-row cursor-pointer justify-center items-center gap-2 w-fit p-1.5 rounded-full bg-white shadow-sm hover:shadow-md transition-all">
-          <span className="h-2 w-2 animate-ping rounded-full bg-green-500 opacity-85"></span>
-          <button className="text-sm cursor-pointer text-gray-800 font-medium">
-            Only 2 open slots available
-          </button>
-          <ArrowRight
-            size={20}
-            className="text-gray-800 p-0.5 rounded-full bg-gray-100"
-          />
+      <div className="relative w-full flex gap-[5.1%] justify-center items-center px-4">
+        {/* LEFT CARD */}
+        <div className="hidden lg:flex slide-up slide-delay-400">
+          <div className="relative w-[230px]">
+            <div className="absolute inset-0 bg-white rounded-2xl -rotate-6 border border-black/5 shadow-md">
+             <div className="bg-white rounded-2xl -rotate-10">
+               <div className="relative bg-white rounded-2xl text-xs p-5 w-full -rotate-4 shadow ">
+                <p className="text-gray-600 text-xs font-medium tracking-tight leading-[1.2]">
+                  "CodeDale turned the impossible into possible and redefined
+                  our expectations of technology partners."
+                </p>
+                 <p className="text-xs font-semibold mt-2">- Narasimha Reddy, CEO, TFS</p>
+              </div>
+             </div>
+            </div>
+          </div>
         </div>
 
-        <div className="flex flex-row gap-2 md:gap-4 mb-2 items-center flex-wrap justify-center">
-          <h1 className="text-4xl md:text-5xl font-semibold">
-            World-class Tech Partner
-          </h1>
-          <span className="flex flex-row justify-center items-center gap-1">
-            <img
-              className="bg-white rounded-lg px-2 py-2 rotate-12 shadow-sm"
-              src="https://www.codedale.tech/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fcursor.b9d537cd.svg&w=32&q=75"
-              alt="cursor"
+        {/*  */}
+        <div className="flex flex-col items-center justify-center mt-10 text-center gap-6 max-w-4xl ">
+          <div className="flex flex-row cursor-pointer justify-center items-center gap-2 w-fit p-1.5 rounded-full bg-white shadow-sm hover:shadow-md transition-all slide-up slide-delay-400">
+            <span className="h-2 w-2 animate-ping rounded-full bg-green-500 opacity-85"></span>
+            <button className="text-sm cursor-pointer text-gray-800 font-medium">
+              Only 2 open slots available
+            </button>
+            <ArrowRight
+              size={20}
+              className="text-gray-800 p-0.5 rounded-full bg-gray-100"
             />
-            <img
-              className="bg-white rounded-lg px-2 py-1 h-8 -rotate-20 shadow-sm"
-              src="https://www.codedale.tech/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ffigma-logo.bdabe27a.svg&w=32&q=75"
-              alt="figma"
-            />
-          </span>
-        </div>
+          </div>
 
-        <h1 className="text-4xl md:text-5xl font-semibold flex items-center justify-center gap-3 flex-wrap">
-          Engineering Your Digital
-          <img
-            className="h-9 rounded-lg rotate-12 bg-white p-2 shadow-sm"
-            src="https://www.codedale.tech/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fthunder.9bc4f0d2.svg&w=48&q=75"
-            alt=""
-          />
-          Success
-        </h1>
+          <div className="flex flex-col justify-center items-center text-center gap-4 slide-up slide-delay-400">
+            <div className="flex flex-row gap-2 md:gap-4 mb-2 items-center flex-wrap justify-center">
+              <h1 className="text-4xl md:text-5xl font-semibold">
+                World-class Tech Partner
+              </h1>
+              <span className="md:flex flex-row justify-center items-center hidden  gap-1">
+                <img
+                  className="bg-white rounded-lg px-2 py-2 rotate-12 shadow-sm"
+                  src="https://www.codedale.tech/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fcursor.b9d537cd.svg&w=32&q=75"
+                  alt="cursor"
+                />
+                <img
+                  className="bg-white rounded-lg px-2 py-1 h-8 -rotate-20 shadow-sm"
+                  src="https://www.codedale.tech/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ffigma-logo.bdabe27a.svg&w=32&q=75"
+                  alt="figma"
+                />
+              </span>
+            </div>
 
-        <p className="text-center text-md text-gray-700 max-w-lg leading-relaxed">
-          Trusted by startups and enterprises to design, build, and scale
-          products that perform globally.
-        </p>
-        {/* CTA */}
-        <button className="flex justify-center items-center rounded-full bg-black hover:bg-gray-900 text-white px-5 py-3 gap-2 cursor-pointer shadow-md transition-all active:scale-95 mt-4">
-          <img
-            className="h-6 bg-white rounded-full p-1"
-            src="https://www.codedale.tech/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FCodeDale-01.bdbe0272.webp&w=1920&q=75"
-            alt="codedale"
-          />
-          +
-          <span className="text-[10px] rounded-full bg-blue-500 text-white px-1 py-1">
-            You
-          </span>
-          <span className="text-[13px] font-medium">Book a 30-Min Call</span>
-        </button>
+            <h1 className="text-4xl md:text-5xl font-semibold flex items-center justify-center gap-3 flex-wrap">
+              Engineering Your Digital
+              <img
+                className="h-9 rounded-lg md:flex hidden rotate-12 bg-white p-2 shadow-sm"
+                src="https://www.codedale.tech/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fthunder.9bc4f0d2.svg&w=48&q=75"
+                alt=""
+              />
+              Success
+            </h1>
 
-        {/* Reviews */}
-        <div className="flex flex-row gap-6 md:gap-10 items-center mt-5">
-          <div className="flex flex-row justify-center items-center gap-[-0.5rem]">
-            <img
-              className="h-8 rounded-2xl -ml-1"
-              src="https://www.codedale.tech/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fabhishek-conquer.f0f4dc65.jpeg&w=640&q=75"
-              alt=""
-            />
-            <img
-              className="h-8 rounded-2xl -ml-2"
-              src="https://www.codedale.tech/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fsujith-reddy-fluentpro.87a6ace5.jpeg&w=640&q=75"
-              alt=""
-            />
-            <img
-              className="h-8 rounded-2xl -ml-2"
-              src="https://www.codedale.tech/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fnarasimha-reddy-tfs.c75b6da4.jpeg&w=640&q=75"
-              alt=""
-            />
-            <p className="text-black py-1.5 px-1 bg-white border border-gray-200 rounded-full text-xs -ml-2 shadow-sm">
-              +30
+            <p className="text-center text-md text-gray-700 max-w-lg leading-relaxed">
+              Trusted by startups and enterprises to design, build, and scale
+              products that perform globally.
             </p>
           </div>
-          <div className="text-center">
-            <p className="text-gray-800 font-semibold">★★★★★</p>
-            <p className="text-xs text-gray-600">From 30+ reviews</p>
+
+          {/* CTA */}
+          <button className="flex justify-center items-center rounded-full bg-black hover:bg-gray-900 text-white px-5 py-3 gap-2 cursor-pointer shadow-md transition-all active:scale-95 mt-4 slide-up slide-delay-400">
+            <img
+              className="h-6 bg-white rounded-full p-1"
+              src="https://www.codedale.tech/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FCodeDale-01.bdbe0272.webp&w=1920&q=75"
+              alt="codedale"
+            />
+            +
+            <span className="text-[10px] rounded-full bg-blue-500 text-white px-1 py-1">
+              You
+            </span>
+            <span className="text-[13px] font-medium">Book a 30-Min Call</span>
+          </button>
+
+          {/* Reviews */}
+          <div className="flex flex-row gap-6 md:gap-10 items-center mt-5 slide-up slide-delay-400">
+            <div className="flex flex-row justify-center items-center gap-[-0.5rem]">
+              <img
+                className="h-8 rounded-2xl -ml-1"
+                src="https://www.codedale.tech/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fabhishek-conquer.f0f4dc65.jpeg&w=640&q=75"
+                alt=""
+              />
+              <img
+                className="h-8 rounded-2xl -ml-2"
+                src="https://www.codedale.tech/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fsujith-reddy-fluentpro.87a6ace5.jpeg&w=640&q=75"
+                alt=""
+              />
+              <img
+                className="h-8 rounded-2xl -ml-2"
+                src="https://www.codedale.tech/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fnarasimha-reddy-tfs.c75b6da4.jpeg&w=640&q=75"
+                alt=""
+              />
+              <p className="text-black py-1.5 px-1 bg-white border border-gray-200 rounded-full text-xs -ml-2 shadow-sm">
+                +30
+              </p>
+            </div>
+            <div className="text-center">
+              <p className="text-gray-800 font-semibold">★★★★★</p>
+              <p className="text-xs text-gray-600">From 30+ reviews</p>
+            </div>
+          </div>
+        </div>
+        {/*  */}
+        {/* RIGHT CARD */}
+        <div className="hidden lg:flex slide-up slide-delay-400">
+          <div className="relative w-[230px]">
+            <div className="absolute   inset-0 bg-white rounded-2xl rotate-6 border border-black/5 z-10 shadow-md animate-slideUp">
+             <div className="bg-white rounded-2xl rotate-10">
+               <div className="relative bg-white rounded-2xl text-xs p-5 w-full rotate-4 shadow">
+                <p className="text-gray-600 text-xs font-medium tracking-tight leading-[1.2]">
+                  "CodeDale turned the impossible into possible and redefined
+                  our expectations of technology partners."
+                </p>
+               <p className="text-xs font-semibold mt-2">- Sujith Reddy Gopu, CEO, Fluent Pro</p>
+              </div>
+             </div>
+            </div>
           </div>
         </div>
       </div>
@@ -186,7 +226,6 @@ const Home = () => {
         <BrandsSlider />
       </div>
 
-          
       <div className="flex mt-10 flex-col items-center justify-center">
         <div>
           <img
@@ -211,69 +250,111 @@ const Home = () => {
       {/* why choose codedale */}
       <div className="flex flex-col mt-16 items-center justify-center">
         <div className="flex flex-col gap-2">
-          <h1 className="font-semibold text-4xl text-center">Why Choose CodeDale?</h1>
-          <p className="  leading-[1.2] max-w-xl text-center ">Discover the advantages of partnering with a tech team that’s built for results and client success:</p>
+          <h1 className="font-semibold text-4xl text-center">
+            Why Choose CodeDale?
+          </h1>
+          <p className="  leading-[1.2] max-w-xl text-center ">
+            Discover the advantages of partnering with a tech team that’s built
+            for results and client success:
+          </p>
         </div>
 
         <div className="grid mt-16 grid-cols-1 md:grid-cols-3 grid-rows-1 md:grid-rows-2 max-w-4xl gap-10 gap-x-20  ">
           <div className="flex flex-col gap-2 items-center text-center">
-             <h1 className="font-medium text-xl">Impact-Driven Solutions</h1>
-             <p className="text-gray-900  text-base max-w-[300px]">Every product we build is custom-crafted to create real business impact.</p>
+            <h1 className="font-medium text-xl">Impact-Driven Solutions</h1>
+            <p className="text-gray-900  text-base max-w-[300px]">
+              Every product we build is custom-crafted to create real business
+              impact.
+            </p>
           </div>
           <div className="flex flex-col gap-2 items-center text-center">
             <h1 className="font-medium text-xl">Fast & Reliable Delivery</h1>
-            <p className="text-gray-900 text-center  max-w-[300px]">Get high-quality results in days or weeks, not months.</p>
+            <p className="text-gray-900 text-center  max-w-[300px]">
+              Get high-quality results in days or weeks, not months.
+            </p>
           </div>
           <div className="flex flex-col gap-2 items-center text-center">
             <h1 className="font-medium text-xl">Transparent & Fair Pricing</h1>
-            <p className="text-gray-900 text-center  max-w-[300px]">Honest, customized pricing with no hidden fees or surprises.</p>
+            <p className="text-gray-900 text-center  max-w-[300px]">
+              Honest, customized pricing with no hidden fees or surprises.
+            </p>
           </div>
           <div className="flex flex-col gap-2 items-center text-center">
             <h1 className="font-medium text-xl">Expert Problem Solvers</h1>
-            <p className="text-gray-900 text-center  max-w-[300px]">We tackle technical and creative challenges with innovative solutions.</p>
+            <p className="text-gray-900 text-center  max-w-[300px]">
+              We tackle technical and creative challenges with innovative
+              solutions.
+            </p>
           </div>
           <div className="flex flex-col gap-2 items-center text-center">
             <h1 className="font-medium text-xl">Seamless Collaboration</h1>
-            <p className="text-gray-900 text-center  max-w-[300px]">Clear communication and feedback at every stage of the project.</p>
+            <p className="text-gray-900 text-center  max-w-[300px]">
+              Clear communication and feedback at every stage of the project.
+            </p>
           </div>
           <div className="flex flex-col gap-2 items-center text-center">
             <h1 className="font-medium text-xl">Direct Access to Top Talent</h1>
-            <p className="text-gray-900 text-center max-w-[300px]">Work directly with senior experts—no long-term hiring needed.</p>
+            <p className="text-gray-900 text-center max-w-[300px]">
+              Work directly with senior experts—no long-term hiring needed.
+            </p>
           </div>
         </div>
       </div>
 
       {/* reserve your slot */}
       <div className="flex mt-16">
-        <p className="border px-6 p-1 py-3 rounded-4xl bg-black text-white">Reserve Your Slot</p>
+        <p className="border px-6 p-1 py-3 rounded-4xl bg-black text-white">
+          Reserve Your Slot
+        </p>
       </div>
 
-
       <div className="w-full max-w-xl mx-auto flex flex-col items-center justify-center text-center py-16 gap-2.5">
-        <h1 className="text-[32px] sm:text-4xl tracking-tight font-semibold undefined">Solutions Tailored for Your Growth</h1>
-        <p className="text-base whitespace-pre-wrap leading-[1.2] undefined">Discover our full-service offerings — crafted to deliver reliability, scalability, and results</p>
+        <h1 className="text-[32px] sm:text-4xl tracking-tight font-semibold undefined">
+          Solutions Tailored for Your Growth
+        </h1>
+        <p className="text-base whitespace-pre-wrap leading-[1.2] undefined">
+          Discover our full-service offerings — crafted to deliver reliability,
+          scalability, and results
+        </p>
       </div>
 
       {/* service images */}
-      <Services/>
+      <Services />
       <div className=" w-full h-full flex md:hidden items-center flex-wrap justify-center gap-3 py-10 px-2 dashed-y-custom">
-       {
-        ["Web Development","App Development","AI Applications","Data Driven Products","Blockchain Technology","Cloud & DevOps","UI/UX","Logo Designing","Rapid Prototyping and MVPs","Digital Marketing & SEO","Brand Strategy","Visual Identity","...and More"].
-        map((data,index)=>(
-           <span key={index} className="py-2 px-5 bg-white text-[15px] text-black rounded-full">
-          {data}
-        </span>
-        ))
-        
-       }
+        {[
+          "Web Development",
+          "App Development",
+          "AI Applications",
+          "Data Driven Products",
+          "Blockchain Technology",
+          "Cloud & DevOps",
+          "UI/UX",
+          "Logo Designing",
+          "Rapid Prototyping and MVPs",
+          "Digital Marketing & SEO",
+          "Brand Strategy",
+          "Visual Identity",
+          "...and More",
+        ].map((data, index) => (
+          <span
+            key={index}
+            className="py-2 px-5 bg-white text-[15px] text-black rounded-full"
+          >
+            {data}
+          </span>
+        ))}
       </div>
 
       {/* our work */}
       <div className="w-full max-w-xl mx-auto flex flex-col items-center justify-center text-center py-16 gap-2.5">
-        <h1 className="text-[32px] sm:text-4xl tracking-tight font-semibold leading-[1.2] undefined">Our Works</h1>
-        <p className="text-base whitespace-pre-wrap leading-[1.2] undefined">Still confused about us? Our Work Speaks for Itself</p>
+        <h1 className="text-[32px] sm:text-4xl tracking-tight font-semibold leading-[1.2] undefined">
+          Our Works
+        </h1>
+        <p className="text-base whitespace-pre-wrap leading-[1.2] undefined">
+          Still confused about us? Our Work Speaks for Itself
+        </p>
       </div>
-       <Works/>
+      <Works />
     </div>
   );
 };

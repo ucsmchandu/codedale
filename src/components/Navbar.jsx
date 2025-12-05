@@ -9,7 +9,7 @@ const Navbar = () => {
   return (
     <div className="bg-gray-100">
       {/* Desktop */}
-      <div className="hidden md:flex bg-gray-50 flex-row justify-between items-center p-7 m-6 -mt-2">
+      <div className="hidden md:flex bg-gray-100 flex-row justify-between items-center p-7 m-6 -mt-2">
         <Link to="/">
           <img className="h-5" src={mainImage} alt="codedale" />
         </Link>

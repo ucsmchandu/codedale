@@ -10,4 +10,29 @@
   animation: marquee 5s linear infinite;
 }
 
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.slide-up {
+  animation-name: slideUp;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards; /* keep final state */
+}
+
+/* small helper classes for delays if you want inline classes */
+.slide-delay-100 { animation-delay: 0.1s; }
+.slide-delay-250 { animation-delay: 0.25s; }
+.slide-delay-400 { animation-delay: 0.4s; }
+
+
+
 
