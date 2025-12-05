@@ -74,16 +74,5 @@ The project uses Tailwind CSS; `src/index.css` imports Tailwind and defines a fe
 
 Client-side routing is handled in `src/App.jsx` with `react-router-dom`. The `MainLayout` component contains the `Navbar`, `Outlet`, and `Footer` so child pages are rendered inside the shared layout.
 
-## Contributing
 
-- Feel free to open issues or PRs. For small changes (styling, copy, minor layout tweaks) send a PR against `main`.
-- If you add features, update this README with usage notes and any new scripts.
-
-## License
-
-No license specified. Add a `LICENSE` file if you want to set one (for example, `MIT`).
-
-## Contact
-
-For questions about this repo, contact the maintainer listed on the git remote or open an issue in this repository.
 
