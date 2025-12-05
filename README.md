@@ -1,16 +1,89 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# codedale
 
-Currently, two official plugins are available:
+A small React + Vite frontend project that recreates the CodeDale landing experience. This repository contains a responsive component-based UI built with React, Vite and Tailwind CSS. It includes a main layout with navigation and footer, several home-page sections (services, works, brand slider, testimonial cards), and simple client-side routing.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## React Compiler
+- **Responsive layout**: Desktop and mobile navigation with an animated mobile dropdown.
+- **Component-driven**: Reusable components under `src/components` and `src/components/HomeComponents`.
+- **TailwindCSS**: Utility-first styling with a few custom animations in `src/index.css`.
+- **Routing**: Uses `react-router-dom` and a `MainLayout` wrapper.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Tech stack
 
-## Expanding the ESLint configuration
+- **Framework**: React (v19)
+- **Bundler / Dev Server**: Vite
+- **Styling**: Tailwind CSS
+- **Icons**: lucide-react
+- **Extras**: swiper (installed but optional)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Getting started
+
+Prerequisites
+
+- Node.js (LTS) and npm installed
+
+Install and run (PowerShell)
+
+```powershell
+# install dependencies
+npm install
+
+# start dev server
+npm run dev
+
+# build the production bundle
+npm run build
+
+# preview the production build locally
+npm run preview
+```
+
+Available npm scripts (from `package.json`)
+
+- `dev`: Runs the Vite development server.
+- `build`: Builds a production bundle with Vite.
+- `preview`: Previews the built app locally.
+- `lint`: Runs ESLint across the project.
+
+## Project structure (important files)
+
+- `index.html` — App HTML entry.
+- `src/main.jsx` — App entry and React mount.
+- `src/App.jsx` — Router and top-level routes.
+- `src/mainlayout/MainLayout.jsx` — Layout wrapper (navbar + outlet + footer).
+- `src/components/Navbar.jsx` — Desktop + mobile navigation.
+- `src/components/Footer.jsx` — Footer and newsletter form.
+- `src/components/HomeComponents` — Home page sections (e.g., `Cards.jsx`, `Services.jsx`, `Works.jsx`, `BrandSlider.jsx`).
+- `src/Home.jsx` — Home page which composes the components.
+- `src/index.css` — Tailwind import + custom animations.
+
+## Components overview
+
+- `Navbar.jsx`: Shows a compact mobile menu and a wider desktop header with quick links and a CTA.
+- `Footer.jsx`: Company info, navigation links, socials and newsletter form.
+- `Cards.jsx`: Testimonial / case-study card used on the Home page.
+- `Services.jsx`, `Works.jsx`, `BrandSlider.jsx`: Visual sections for services, featured works, and brand logos.
+
+## Styling and animations
+
+The project uses Tailwind CSS; `src/index.css` imports Tailwind and defines a few small keyframe animations used across components (e.g., marquee animation for the brand slider and a slide-up animation for entrance effects).
+
+## Routing
+
+Client-side routing is handled in `src/App.jsx` with `react-router-dom`. The `MainLayout` component contains the `Navbar`, `Outlet`, and `Footer` so child pages are rendered inside the shared layout.
+
+## Contributing
+
+- Feel free to open issues or PRs. For small changes (styling, copy, minor layout tweaks) send a PR against `main`.
+- If you add features, update this README with usage notes and any new scripts.
+
+## License
+
+No license specified. Add a `LICENSE` file if you want to set one (for example, `MIT`).
+
+## Contact
+
+For questions about this repo, contact the maintainer listed on the git remote or open an issue in this repository.
+
