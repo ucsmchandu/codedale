@@ -6,6 +6,8 @@ import { Autoplay, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import BrandsSlider from "./components/HomeComponents/BrandSlider";
+import Services from "./components/HomeComponents/Services";
+import Works from "./components/HomeComponents/Works";
 
 const Home = () => {
   const cardsData = [
@@ -210,7 +212,7 @@ const Home = () => {
       <div className="flex flex-col mt-16 items-center justify-center">
         <div className="flex flex-col gap-2">
           <h1 className="font-semibold text-4xl text-center">Why Choose CodeDale?</h1>
-          <p className="w-lg text-center text-gray-800">Discover the advantages of partnering with a tech team that’s built for results and client success:</p>
+          <p className="  leading-[1.2] max-w-xl text-center ">Discover the advantages of partnering with a tech team that’s built for results and client success:</p>
         </div>
 
         <div className="grid mt-16 grid-cols-1 md:grid-cols-3 grid-rows-1 md:grid-rows-2 max-w-4xl gap-10 gap-x-20  ">
@@ -252,13 +254,26 @@ const Home = () => {
         <p className="text-base whitespace-pre-wrap leading-[1.2] undefined">Discover our full-service offerings — crafted to deliver reliability, scalability, and results</p>
       </div>
 
-
-      <div className="hidden md:grid grid-cols-3 w-full h-full gap-y-16 items-center justify-center py-10 px-10 dashed-y-custom">
-        <div>
-
-        </div>
+      {/* service images */}
+      <Services/>
+      <div className=" w-full h-full flex md:hidden items-center flex-wrap justify-center gap-3 py-10 px-2 dashed-y-custom">
+       {
+        ["Web Development","App Development","AI Applications","Data Driven Products","Blockchain Technology","Cloud & DevOps","UI/UX","Logo Designing","Rapid Prototyping and MVPs","Digital Marketing & SEO","Brand Strategy","Visual Identity","...and More"].
+        map((data,index)=>(
+           <span key={index} className="py-2 px-5 bg-white text-[15px] text-black rounded-full">
+          {data}
+        </span>
+        ))
+        
+       }
       </div>
 
+      {/* our work */}
+      <div className="w-full max-w-xl mx-auto flex flex-col items-center justify-center text-center py-16 gap-2.5">
+        <h1 className="text-[32px] sm:text-4xl tracking-tight font-semibold leading-[1.2] undefined">Our Works</h1>
+        <p className="text-base whitespace-pre-wrap leading-[1.2] undefined">Still confused about us? Our Work Speaks for Itself</p>
+      </div>
+       <Works/>
     </div>
   );
 };
